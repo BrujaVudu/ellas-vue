@@ -61,7 +61,7 @@ export default {
 
 <style lang="sass">
 @import "./sass/_global"
-@import "./sass/_celular"
+@import "./sass/celular/_global"
 header
   a 
     background: $morado-ellas  

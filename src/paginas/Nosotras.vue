@@ -3,6 +3,7 @@
         aside.tarjetas-en-columna
             Citas.card.pad.fondo-rosa
             SaberMas.card.pad
+            Preguntas.card.pad.fondo-gris-claro
         .derecha
             section(v-for="i in data")
                 prismic-rich-text(:field="i.nombre").h2morado
@@ -13,12 +14,14 @@
 <script>
 import Citas from '@/components/Citas.vue' 
 import SaberMas from '@/components/SaberMas.vue' 
+import Preguntas from '@/components/PreguntasFrecuentes.vue'
 
 export default {
     name: 'nosotras',
     components: {
         Citas,
-        SaberMas
+        SaberMas,
+        Preguntas
     }, 
     data() {
         return {
@@ -39,3 +42,6 @@ export default {
     
 }
 </script>
+<style lang="sass" scoped>
+@import @/sass/celular/_nosotras
+</style>

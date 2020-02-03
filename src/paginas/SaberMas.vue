@@ -66,5 +66,11 @@ section
     font-size: 0.8em
 span
   color: grey    
-  
+@media (max-width: 770px)
+  .pt110
+    padding-top: 0
+  .pad
+    padding: 10px
+  .titulo
+    font-size: 1em  
 </style>

@@ -13,9 +13,10 @@
           component(:is="componenteSeleccionado").card.pad.mt-2em
           component(v-if="dobleComponente" is="DenunciasComisaria").card.pad.mt-2em
         
-        router-link(to="/citas").sin-under
-          h2.letra-morada-oscura.mt-2em Recordatorios
-        Citas.card.fondo-gris-claro.mt-2em.pad.letra-morada-oscura
+        .recordatorios
+          router-link(to="/citas").sin-under
+            h2.letra-morada-oscura.mt-2em Recordatorios
+          Citas.card.fondo-gris-claro.mt-2em.pad.letra-morada-oscura
       
       router-view(:municipio="municipio")
 
@@ -91,4 +92,5 @@ export default {
 </script>
 <style lang="sass">
 @import @/sass/componentes/_violencias
+@import @/sass/celular/_violencias
 </style>

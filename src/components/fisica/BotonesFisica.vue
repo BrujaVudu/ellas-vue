@@ -13,4 +13,7 @@
 </template>
 <style lang="sass" scoped>
 @import "@/sass/componentes/_botonesIntraViolencias"
+@media (max-width: 770px)   
+  .horizontal
+    flex-direction: column
 </style>

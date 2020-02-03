@@ -46,8 +46,9 @@ button
 .imagen 
     background: $morado-ellas
     border-radius: 50%
-    width: 100px
+    max-width: 100px
     height: 100px 
+    width: 50%
     display: flex 
     align-items: center
     justify-content: center

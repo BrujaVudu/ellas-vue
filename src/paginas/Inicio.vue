@@ -107,6 +107,7 @@ export default {
 </script>
 <style lang="sass" scoped>
 @import "@/sass/globales/_colores"
+@import "@/sass/celular/_inicio"
 .presentacion
   display: grid
   grid-template-columns: 1fr 2fr 1fr
