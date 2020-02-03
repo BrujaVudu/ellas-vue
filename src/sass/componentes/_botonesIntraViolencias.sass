@@ -1,0 +1,39 @@
+@import "../globales/_colores"
+.botonera
+  margin-bottom: 50px
+.grid
+  display: grid
+  justify-items: center
+  border-radius: 4px
+  padding: 10px
+  a 
+    width: 100%
+.cuatro-columnas    
+  grid-template-columns: 1fr 1fr 1fr 1fr
+.dos-columnas
+  grid-template-columns: 1fr 1fr 
+
+.boton
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-end
+  font-size: 0.85em
+  height: 100%
+  padding: 8px
+  border-radius: 4px
+  transition: all .3s
+  &:hover
+    background: white
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05)
+    transform: translateY(-5px)
+.vertical
+  flex-direction: column
+  text-align: center
+  img 
+    max-height: 70px
+.horizontal    
+  flex-direction: row
+  text-align: left
+  img 
+    margin-right: 12px

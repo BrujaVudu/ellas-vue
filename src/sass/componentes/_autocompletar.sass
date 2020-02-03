@@ -1,0 +1,42 @@
+
+.autocomplete 
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: flex-end
+.input 
+    font-weight: bold
+    display: flex
+    align-items: center
+    cursor: pointer
+    position: relative
+    height: 40px
+    margin: 0 40px 0 20px
+    user-select: none
+.contenido
+  color: #343434
+  min-width: 480px
+  padding: 40px
+  text-align: left
+  input 
+      background: transparent
+      border: none
+      width: 100%
+      line-height: 1.5em
+      padding: 10px
+      font-size: 1.3em
+      border-width: 1px
+      &:focus
+        outline: red
+        border-bottom: solid 1px #0074D9
+  ul
+      list-style: none
+      margin: 0
+      padding: 0
+      li 
+          padding: 5px
+          width: 100%
+          cursor: pointer
+.seleccionado 
+    font-weight: bold
+    background: lightgrey

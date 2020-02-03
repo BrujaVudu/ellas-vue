@@ -1,0 +1,28 @@
+@import @/sass/globales/_colores
+@mixin colores($col)
+  .resaltado
+    font-weight: bold
+    color: $col
+  .ejemplos 
+    background: $col
+    color: white
+    margin: 2em 0
+
+.fisica
+  @include colores(#6a4586)
+.sexual
+  @include colores(#aa3e66)          
+.economica
+  @include colores(#ed6734)          
+.politica
+  @include colores(#48c1b9)
+.acoso
+  @include colores(#c14a91)
+
+button
+  background: $lila
+  color: $morado-oscuro
+
+.violencias-fondo-botones
+  background: $amarillo
+  

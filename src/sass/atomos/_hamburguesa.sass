@@ -1,0 +1,36 @@
+label
+  display: inline-block
+  padding: 7px 10px
+  background-color: transparent
+  cursor: pointer
+  margin: 10px
+  z-index: 3
+
+.bar
+  display: block
+  background-color: #0799d3
+  width: 30px
+  height: 3px
+  border-radius: 5px
+  margin: 5px auto
+  transition: background-color .3s ease-in, transform .3s ease-in, width .3s ease-in
+  
+input[type="checkbox"]
+  display: none
+
+  &:checked ~
+    label
+      .bar
+        background-color: grey
+
+      .top
+        transform: translateY(5px) rotateZ(45deg)
+
+      .bottom
+        transform: translateY(-10px) rotateZ(-45deg)
+
+      .middle
+        width: 0
+
+.middle
+  margin: 0 auto  
