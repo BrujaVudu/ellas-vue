@@ -1,7 +1,13 @@
 <template lang="pug">
   #app
+    Modal(v-if="uno")
+      prismic-rich-text(:field="data[0].contenido")
+      
+    Modal(v-if="dos") 
+      prismic-rich-text(:field="data[3].contenido")
+
     transition(name="slide")
-      Menu(v-if="menu") 
+      Menu(v-if="menu", @modalm="muestra") 
     header.fondo-gris-claro.letra-morada-oscura
       router-link(to="/", v-if="$route.path !== '/'")
         img(alt="Logo Ellas Libres de Violencias", src="@/assets/LogoEllas.svg", height="60")
@@ -22,12 +28,16 @@ import Cabecera from './components/Cabecera.vue'
 import Menu from './components/Menu.vue'
 import Inicio from './paginas/Inicio.vue'
 import Pie from '@/components/Pie.vue' 
+import Modal from "@/components/Modal.vue"
 
 export default {
   name: 'app',
   data() {
     return {
-      menu: false
+      menu: false,
+      data: [],
+      uno: false,
+      dos: false
     }
   },
   mounted() {
@@ -45,6 +55,7 @@ export default {
     }
   },
   components: {
+    Modal,
     Autocompletar,
     Cabecera,
     Menu,
@@ -54,6 +65,23 @@ export default {
   computed: {
     municipio() {
       return this.$store.state.municipio
+    }
+  },
+  methods: {
+    muestra(m) {
+      this.menu = !this.menu
+      if(m == 1) {
+        this.uno = !this.uno
+      } else {
+        this.dos = !this.dos
+      }
+    },
+    getContent () {
+      this.$prismic.client.getSingle('acciones_inicio')
+        .then((response) => {
+          this.data = response.data.acciones
+      })
+
     }
   }
 }
