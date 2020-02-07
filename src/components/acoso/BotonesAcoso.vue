@@ -13,11 +13,11 @@
       router-link(to="/violencias/acoso/publicos")
         .boton.vertical
           img(alt="Ícono acoso sexual en espacios públicos", src="@/assets/iconos-acoso/icono-publicos.svg", width="80")
-          p Espacios públicos
+          p Públicos
       router-link(to="/violencias/acoso/virtuales")
         .boton.vertical
           img(alt="Ícono acoso sexual en espacios virtuales", src="@/assets/iconos-acoso/icono-virtuales.svg", width="80")
-          p Espacios virtuales
+          p Virtuales
 </template>
 <style lang="sass" scoped>
 @import "@/sass/componentes/_botonesIntraViolencias"
