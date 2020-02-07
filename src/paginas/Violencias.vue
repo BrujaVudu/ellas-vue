@@ -15,8 +15,8 @@
         
         .recordatorios
           router-link(to="/citas").sin-under
-            h2.letra-morada-oscura.mt-2em Recordatorios
-          Citas.card.fondo-gris-claro.mt-2em.pad.letra-morada-oscura
+            h2.letra-morada-oscura.mt-2em Para recordar
+          Citas.card.fondo-rosa.mt-2em.pad
       
       router-view(:municipio="municipio")
 
