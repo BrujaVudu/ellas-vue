@@ -4,8 +4,10 @@
         q {{ data.frase }}
         h3 — {{ data.autor1 }}
       .botones
-        button(@click="cambiarCita(indice-1)").texto-izq Anterior
-        button(@click="cambiarCita(indice+1)").texto-izq Siguiente
+        button(@click="cambiarCita(indice-1)").texto-izq 
+          img(src="@/assets/anterior.svg", height="25")
+        button(@click="cambiarCita(indice+1)").texto-izq
+          img(src="@/assets/anterior.svg", height="25").invertir
         .der
           Compartir(:indice.sync="indice", style="text-align: right") 
 
@@ -53,4 +55,6 @@ export default {
 </script>
 <style lang="sass" scoped>
 @import "@/sass/componentes/_botonesCita"
+.invertir 
+  transform: rotate(180deg)
 </style>

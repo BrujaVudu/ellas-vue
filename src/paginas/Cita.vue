@@ -15,6 +15,9 @@
       button(type='submit', :onClick="tuiter").bot.tw
         img.img(style='vertical-align:middle' src='@/assets/tw.svg' alt='' width='16' height='16')
         span Tuitear 
+      button(:onclick="`window.location.href='whatsapp://send?text=${cita} | *Conoce más en ellaslibresdeviolencias.com*'`", data-action="share/whatsapp/share").bot.wa
+        img.img(style='vertical-align:middle' src='@/assets/wa.svg' alt='' width='16' height='16')
+        span Whatsapp
 
 </template>
 <script>
@@ -46,7 +49,7 @@ export default {
       },
       tuiter() {
         return "window.open('https://twitter.com/intent/tweet?hashtags=EllasSinViolencias&text=" + this.cita + "&url=" + window.location.href + "', '', 'width=1000')"
-      }
+      },
     },
     beforeUpdate() {
       var titulo = document.createElement('meta')
@@ -137,4 +140,7 @@ P
   margin-right: 10px
 .tw  
   background: #1b95e0
+  margin-right: 10px
+.wa  
+  background: #4caf50
 </style>

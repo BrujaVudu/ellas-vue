@@ -2,7 +2,8 @@
   button(
     type="button",
     :onClick="url"
-    ) Compartir 
+    ) 
+    img(src="@/assets/share.svg", height="25")
 </template>
 <script>
 export default {
