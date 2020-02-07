@@ -11,11 +11,11 @@
 
       //- Cómo saber
       button(@click="saber = !saber") {{ contenido[1].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[1].contenido", v-if="saber")
+      prismic-rich-text(:field="contenido[1].contenido", v-if="saber", htmlSerializer)
       
       //- Recomendaciones
       button(@click="recomendaciones = !recomendaciones") {{ contenido[2].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[2].contenido", v-if="recomendaciones")
+      prismic-rich-text(:field="contenido[2].contenido", v-if="recomendaciones", htmlSerializer)
       
 </template>
 <script>

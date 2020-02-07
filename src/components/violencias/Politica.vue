@@ -6,27 +6,27 @@
       prismic-rich-text(:field="contenido[0].contenido")
 
       button(@click="ejemplos = !ejemplos").ejemplos Ver ejemplos
-      prismic-rich-text(:field="contenido[1].contenido", v-if="ejemplos")
+      prismic-rich-text(:field="contenido[1].contenido", v-if="ejemplos", htmlSerializer)
 
       h3 Si eres víctima de violencia política sigue estos pasos:
 
       button(@click="pasos.uno = !pasos.uno") {{ contenido[2].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[2].contenido", v-if="pasos.uno")
+      prismic-rich-text(:field="contenido[2].contenido", v-if="pasos.uno", htmlSerializer)
 
       button(@click="pasos.dos = !pasos.dos") {{ contenido[3].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[3].contenido", v-if="pasos.dos")
+      prismic-rich-text(:field="contenido[3].contenido", v-if="pasos.dos", htmlSerializer)
       
       button(@click="pasos.tres = !pasos.tres") {{ contenido[4].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[4].contenido", v-if="pasos.tres")
+      prismic-rich-text(:field="contenido[4].contenido", v-if="pasos.tres", htmlSerializer)
 
       button(@click="pasos.cuatro = !pasos.cuatro") {{ contenido[5].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[5].contenido", v-if="pasos.cuatro")
+      prismic-rich-text(:field="contenido[5].contenido", v-if="pasos.cuatro", htmlSerializer)
       
       button(@click="pasos.cinco = !pasos.cinco") {{ contenido[6].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[6].contenido", v-if="pasos.cinco")
+      prismic-rich-text(:field="contenido[6].contenido", v-if="pasos.cinco", htmlSerializer)
 
       button(@click="pasos.seis = !pasos.seis") {{ contenido[7].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[7].contenido", v-if="pasos.seis")
+      prismic-rich-text(:field="contenido[7].contenido", v-if="pasos.seis", htmlSerializer)
   
 </template>
 <script>

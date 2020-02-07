@@ -3,13 +3,13 @@
       h1.titulo.ec
         img(src="@/assets/iconos-violencias/icono-economica.svg", alt="Ícono violencia física o psicológica", width="60") 
         | Violencia económica
-      prismic-rich-text(:field="contenido[0].contenido")
+      prismic-rich-text(:field="contenido[0].contenido", htmlSerializer)
 
       button(@click="pasos.uno = !pasos.uno") {{ contenido[1].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[1].contenido", v-if="pasos.uno")
+      prismic-rich-text(:field="contenido[1].contenido", v-if="pasos.uno", htmlSerializer)
 
       button(@click="pasos.dos = !pasos.dos") {{ contenido[2].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[2].contenido", v-if="pasos.dos")
+      prismic-rich-text(:field="contenido[2].contenido", v-if="pasos.dos", htmlSerializer)
     
 </template>
 <script>

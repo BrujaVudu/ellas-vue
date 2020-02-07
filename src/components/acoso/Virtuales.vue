@@ -6,16 +6,16 @@
     Botones
     section
       h1 {{ contenido[0].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[0].contenido")
+      prismic-rich-text(:field="contenido[0].contenido", htmlSerializer)
 
       button(@click="ejemplos = !ejemplos").ejemplos Ver ejemplos
-      prismic-rich-text(:field="contenido[1].contenido", v-if="ejemplos")
+      prismic-rich-text(:field="contenido[1].contenido", v-if="ejemplos", htmlSerializer)
       
       button(@click="virtuales = !virtuales") {{ contenido[2].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[2].contenido", v-if="virtuales")
+      prismic-rich-text(:field="contenido[2].contenido", v-if="virtuales", htmlSerializer)
       
       button(@click="depues = !depues") {{ contenido[3].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[3].contenido", v-if="depues")
+      prismic-rich-text(:field="contenido[3].contenido", v-if="depues", htmlSerializer)
     
 </template>
 <script>

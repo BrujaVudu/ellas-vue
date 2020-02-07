@@ -77,9 +77,12 @@ Vue.prototype.$http = axios
 // Requerimientos de Prismic
 import PrismicVue from 'prismic-vue';
 import linkResolver from './scripts/link-resolver';
+import htmlSerializer from './scripts/html-serializer';
+
 Vue.use(PrismicVue, {
   endpoint: window.prismic.endpoint,
-  linkResolver
+  linkResolver,
+  htmlSerializer
 });
 
 Vue.config.productionTip = false

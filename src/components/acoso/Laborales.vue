@@ -6,21 +6,21 @@
     Botones
     section
       h1 {{ contenido[0].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[0].contenido")
+      prismic-rich-text(:field="contenido[0].contenido", htmlSerializer)
 
       button(@click="ejemplos = !ejemplos").ejemplos Ver ejemplos
-      prismic-rich-text(:field="contenido[1].contenido", v-if="ejemplos")
+      prismic-rich-text(:field="contenido[1].contenido", v-if="ejemplos", htmlSerializer)
       
       //- Privada
       button(@click="privada = !privada") {{ contenido[2].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[2].contenido", v-if="privada")
+      prismic-rich-text(:field="contenido[2].contenido", v-if="privada", htmlSerializer)
       
       //- Publica
       button(@click="publica = !publica") {{ contenido[3].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[3].contenido", v-if="publica")
+      prismic-rich-text(:field="contenido[3].contenido", v-if="publica", htmlSerializer)
       
       button(@click="despues = !despues") {{ contenido[4].subtitulo[0].text }}
-      prismic-rich-text(:field="contenido[4].contenido", v-if="despues")
+      prismic-rich-text(:field="contenido[4].contenido", v-if="despues", htmlSerializer)
 </template>
 <script>
 import Botones from "@/components/acoso/BotonesAcoso"
