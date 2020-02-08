@@ -1,6 +1,6 @@
 <template lang="pug">
     main
-        h1 Recordatorios
+        h1 Para recordar
         .citas.auto-grid-min300.contenedor.pt40
           template(v-for="(e, i) in data")
             router-link(:to="'/citas/' + i").cita.card.pad.fondo-rosa.letra-blanca.pt40 

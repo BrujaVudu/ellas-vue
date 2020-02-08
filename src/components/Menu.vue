@@ -11,7 +11,7 @@
     .fondo-lila.seccion
       router-link(to="/") Inicio 
       router-link(to="/preguntas-frecuentes/0") Preguntas frecuentes
-      router-link(to="/citas") Recordatorios
+      router-link(to="/citas") Para recordar
       router-link(to="/saber-mas") Para saber más
     .fondo-blanco.seccion
       router-link(to="/nosotras") ¿Qué es Ellas?
