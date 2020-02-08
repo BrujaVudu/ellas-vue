@@ -1,10 +1,16 @@
 <template lang="pug">
     footer
         a(href="https://docs.google.com/forms/d/1LBfksSga5UTLltcQkwEKfv_BG4LS3joOsnWR6KoCOCo/viewform?edit_requested=true", target="_blank")
-            .imagen
-                img(src="@/assets/cuente.png")
-            button Cuéntanos tu experiencia
-              include ../assets/next.svg
+          .imagen
+            img(src="@/assets/cuente.png")
+          button Cuéntanos tu experiencia
+            include ../assets/next.svg
+        ul.laRed
+          li
+            b Red Nacional de Mujeres
+          li Teléfono: +57 (1) 716 47 65
+          li nacional@rednacionaldemujeres.org
+            
     
 </template>
 <script>
@@ -57,4 +63,7 @@ button
     img 
         width: 60px
         height: 60px
+ul
+  list-style: none
+  color: $morado-oscuro
 </style>
