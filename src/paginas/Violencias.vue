@@ -60,6 +60,8 @@ export default {
     data() {
       return {
         data: [],
+        // glosario: [],
+        // spans: [],
         violencia: this.$route.query.v,
         botonComponentes: [
           ['Centros de urgencias','Urgencias'],
@@ -73,6 +75,9 @@ export default {
       }
     },
     methods: {
+      fromSerializer() {
+        alert("hola")
+      },
       seleccionaComponente(comp) {
         if (this.componenteSeleccionado === comp || this.componenteSeleccionado === comp[0]) {
           this.componenteSeleccionado = null
@@ -87,6 +92,28 @@ export default {
           this.dobleComponente = true
         }
       }
+    },
+    mounted() {
+      // // Un NodeList con todas las palabras que estén encerradas en la clase "glosario"
+      // var spansDom = document.querySelectorAll('.glosario')
+      // // Convierte NodeList en arreglo
+      // var arregloDeSpans = Array.prototype.slice.call(spansDom)
+      // // Agrupa el arreglo en un objeto según su contenido
+      // var spansAgrupados = arregloDeSpans.reduce(function(grupos, e) {
+      //   const val = e.innerHTML.toLowerCase()
+      //   grupos[val] = grupos[val] || []
+      //   grupos[val].push(e)
+      //   return grupos
+      // }, {})
+      // this.$prismic.client.getSingle('palabras_clave')
+      //   .then((response) => {
+      //     this.glosario = response.data['palabra-definicion']
+          // claves.forEach(g => {
+          //   spansAgrupados[g.palabra.toLowerCase()].forEach(s => {
+          //     alert(s.innerHTML)
+          //   })
+          // })
+        // })
     }
 }
 </script>

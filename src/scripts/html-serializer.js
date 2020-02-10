@@ -2,7 +2,7 @@ import prismicDOM from 'prismic-dom';
 
 const Elements = prismicDOM.RichText.Elements;
 
-// Con esto estoy tratando de llamar el contenido del glosario desde el serializar para llenar los span, pero no lo logro
+// Con esto estoy tratando de llamar el contenido del glosario desde el serializar para llenar los span, pero no lo logro.
 
 // var Prismic = require('prismic-javascript');
 
@@ -20,7 +20,8 @@ export default function (type, element, content, children) {
     switch(content.toLowerCase()){
       case 'audiencia':
       case 'audiencias':
-        return `<span class="tooltip" style="border-bottom: 1px dotted black; cursor: pointer">${children.join('')} <span class="tooltiptext">Acto en el que una autoridad recibe con carácter oficial a las personas que quieren conversar con él, generalmente para exponer, reclamar o solicitar alguna cosa.</span></span>`;
+        // return `<span class="tooltip" style="border-bottom: 1px dotted black; cursor: pointer">${children.join('')} <span class="tooltiptext">Acto en el que una autoridad recibe con carácter oficial a las personas que quieren conversar con él, generalmente para exponer, reclamar o solicitar alguna cosa.</span></span>`;
+        return `<span class="tooltip" style="border-bottom: 1px dotted black; cursor: pointer" @click="fromSerializer">${children.join('')} <span class="tooltiptext">Acto en el que una autoridad recibe con carácter oficial a las personas que quieren conversar con él, generalmente para exponer, reclamar o solicitar alguna cosa.</span></span>`;
       case 'autoridad competente':
       case 'autoridades competentes':
         return `<span class="tooltip" style="border-bottom: 1px dotted black; cursor: pointer">${children.join('')} <span class="tooltiptext">Cualquiera autoridad pública con poder para dictar reglamentos, órdenes, decretos u otras instrucciones que tengan fuerza de ley.</span></span>`;
